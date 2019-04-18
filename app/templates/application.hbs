@@ -1,5 +1,10 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+<h3>{{model.name}}</h3>
+<ul>
+  {{#each model.locations as |location|}}
+     <li>{{location.name}}</li>
+  {{/each}}
+</ul>
 
-{{outlet}}
+<button {{ action 'save' on='click' }}>
+  Save
+</button>
